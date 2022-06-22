@@ -1,0 +1,439 @@
+// Slider style
+.main_slider{
+    background: url('../../../public/images/slider-header.png');
+    .main_slider-section{
+        padding:244px 0 138px 0;
+        .mySwiper{
+            .swiper-wrapper{
+                .main_slider-info{
+                    width: 65%;
+                    .main_slider-title{
+                        @include myfont(normal, 400, 60px, $white);
+                    }
+                    .main_slider-text{
+                        width: 70%;
+                        padding:25px 0 50px 0;
+                        @include myfont(normal, 500, 16px, $white);
+                        line-height: 28px;
+                        margin-bottom:0;
+                    }
+                    .main_slider-button{
+                        border: none;
+                        color: $white;
+                        background-color: $blue;
+                        line-height: 24px;
+                        padding: 19px 33px 17px 33px;
+                        transition: .3s ease-in-out;
+                        @include border(1px solid $blue, 0px);
+                        @include myfont(normal, 700, 16px, $white);
+                        &:hover{
+                            background-color: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Home page services style
+.services{
+    .services-section{
+        padding: 80px 0;
+        .services-title{
+            @include myfont(normal, 600, 42px, $dblue);
+            line-height: 63px;
+        }
+        .services-text{
+            width: 50%;
+            padding-top: 16px;
+            @include myfont(normal, 400, 20px, $dgray);
+            line-height: 34px;
+            padding-bottom:80px;
+        }
+        .all-services{
+            @include grid-box(repeat(auto-fill, minmax(250px,1fr)),dense,20px);
+            .service{
+                position: relative;
+                padding: 54px 28px 47px 28px;
+                border-radius: 10px;
+                background-color: #F4F8FD;
+                transition: .3s ease-in-out;
+                z-index: 1;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    transition: opacity 0.3s ease;
+                    background: linear-gradient(135.47deg, #4689D7 0.81%, #1E5DD3 100%);
+                    opacity: 0;
+                }
+                &:hover::after{
+                    opacity: 1;
+                }
+                &:hover{
+                    transform: scale(1.1);
+                }
+                &:hover .service-icon{
+                    background-color: $mblue;
+                }
+                &:hover .service-icon svg path{
+                    fill: white;
+                }
+                &:hover .service-info .service-name{
+                    color: $white;
+                }
+                &:hover .service-info .service-description{
+                    color: $white;
+                }
+                .service-icon{
+                    position: relative;
+                    z-index: 3;
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 100%;
+                    background-color: #EAEEF5;
+                    transition: .3s ease-in-out;
+                    @include flex-box(center,center);
+                }
+                .service-info{
+                    position: relative;
+                    z-index: 3;
+                    padding-top: 32px;
+                    .service-name{
+                        transition: .3s ease-in-out;
+                        @include myfont(normal, 600, 16px, $dblue);
+                        line-height: 24px;
+                    }
+                    .service-description{
+                        transition: .3s ease-in-out;
+                        @include myfont(normal, 400, 14px, $dgray);
+                        margin-bottom: 0;
+                        line-height: 21px;
+                    }
+                }
+            }
+        }
+    }
+}
+// Home page about us style
+.about{
+    background-color: $gray;
+    .about_section{
+        padding: 160px 0 100px 0;
+        @include grid-box(repeat(auto-fill, minmax(450px,1fr)),dense,50px);
+        .about_section-info{
+            width: 100%;
+            .section-description{
+                padding: 28px 0 37px 0;
+            }
+            .about-link{
+                position: relative;
+                a{
+                   z-index: 3;
+                   display: inline-block;
+                }
+                img{
+                    z-index: 1;
+                    position: absolute;
+                    left: 5%;
+                    top: 35%;
+                }
+            }
+        }
+        .about_section-img{
+            width: 100%;
+            padding-left: 50px;
+            img{
+                width: 100%;
+                height: 485px;
+            }
+        }
+    }
+}
+// Home page portfolio style
+.portfolio{
+    padding: 60px 0;
+    .portfolio-section{
+        padding: 0 0 60px 0;
+        .portfolio-tabs{
+            .portfolio-tab{
+                cursor: pointer;
+                padding: 6px 25px;
+                border-radius: 1.5px;
+                border-bottom: 3px solid #DCE4F0;
+                &:nth-child(n+2){
+                    border-radius: 0;
+                }
+                &:last-child{
+                    border-top-right-radius: 3px;
+                    border-bottom-right-radius: 3px;
+                }
+            }
+        }
+    }
+    .portfolio-carousel{
+        margin-bottom: 70px;
+        .mySwiperPortfolio{
+            display: none;
+            padding: 0 20px;
+            overflow: initial;/* Black w/ opacity */
+            -webkit-animation-name: fadeIn; /* Fade in the background */
+            -webkit-animation-duration: 0.6s;
+            animation-name: fadeIn;
+            animation-duration: 0.6s;
+            .portfolio-items{
+                .portfolio_item{
+                    box-shadow: 5px 16px 50px 0px #00000021;
+                    .portfolio_item-img{
+                        height: 368px;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            border-radius: 10px 10px 0px 0px;
+                        }
+                    }
+                    .portfolio_item-info{
+                        border-radius: 0px 0px 10px 10px;
+                        padding: 26px 48px;  
+                        background-color: white; 
+                        a{ 
+                            @include myfont(normal, 600, 20px, $dblue);
+                        }
+                        h6{
+                            margin-bottom: 0;
+                            @include myfont(normal, 400, 18px, #B9BBBE);
+                            line-height: 27px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .portfolio-link{
+        @include flex-box(center,center);
+        .section-link{
+            padding: 19px 32px;
+        }
+    }
+}
+// Home page get the price of website style
+.calculator{
+    background: url('../../../public/images/slider-content.png')center/cover no-repeat;
+    .calculator-section{
+        padding: 70px 0;
+        .calculator_form{
+            margin: auto;
+            max-width: 972px;
+            border-radius: 8px;
+            padding: 48px 80px;
+            background-color: $white;
+            box-shadow: -10px -10px 60px 0px #00000033;
+            // background: url('../../../public/images/formBg.png')center/cover;
+            h1{
+                margin-bottom: 0;
+                padding-bottom: 36px;
+            }
+            .website-field{
+                margin-bottom: 40px;
+                h5{
+                    padding-bottom: 18px;
+                    @include myfont(normal, 500, 22px, $dblue);
+                }
+                .website-select{
+                    width: 100%;
+                    padding: 16px 26px;
+                    @include border(1px solid #BECAD6, 8px);
+                    @include myfont(normal, 400, 18px, $dblue);
+                }
+                .website-types{
+                    @include grid-box(repeat(auto-fill, minmax(250px,1fr)),dense,20px);
+                    .website-type{
+                        @include flex-box(normal,center);
+                        input{
+                            cursor: pointer;
+                            width: 26px;
+                            height: 26px;
+                            @include border(1px solid #BECAD6, 2px);
+                        }
+                        label{
+                            cursor: pointer;
+                            padding-left: 16px;
+                            @include myfont(normal, 400, 18px, #495057);
+                        }
+                    }
+                }
+            }
+            .website-price{
+                .price-section{
+                    .price-field{
+                        @include myfont(normal, 600, 24px, $dblue);
+                        span{
+                            @include myfont(normal, 600, 40px, $sblue);
+                        }
+                    }
+                }
+                .section-link{
+                    margin-left: 43px;
+                    padding: 11px 44px;
+                }
+            }
+        }
+    }
+}
+// Home page blogs style
+.blogs{
+    .blogs-section{
+        padding: 60px 0;
+        .all-blogs{
+            margin: 105px 0 60px 0;
+            @include grid-box(repeat(auto-fill, minmax(350px,1fr)),dense,25px);
+            .blog{
+                overflow: hidden;
+                position: relative;
+                transition: .3s ease-in-out;
+                .blog_img{
+                    height: 235px;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-top-left-radius: 8px;
+                        border-top-right-radius: 8px;
+                    }
+                }
+                .blog_info{
+                    padding: 20px 25px;
+                    border:1px solid #D0D5DA;
+                    border-bottom-left-radius: 8px;
+                    border-bottom-right-radius: 8px;
+                    .blog-category{
+                        margin-bottom: 0;
+                        line-height: 24px;
+                        @include myfont(normal, 600, 16px, $sblue);
+                    }
+                    .blog-name{
+                        margin-bottom: 0;
+                        padding: 10px 0 14px 0;
+                        @include myfont(normal, 600, 18px, $dblue);
+                    }
+                    .blog_author{
+                        .blog_author-img{
+                            img{
+                                width: 25px;
+                                height: 25px;
+                                border-radius: 100%;
+                            }
+                            .blog_author-name{
+                                margin-bottom:0;
+                                padding-left: 8px;
+                                @include myfont(normal, 500, 12px, #A4A8BA);
+                                line-height: 18px;
+                            }
+                        }
+                        .blog-date{
+                            margin-bottom: 0;
+                            @include myfont(normal, 500, 12px, #A4A8BA);
+                        }
+                    }
+                }
+                .blog_hover{
+                    border-radius: 8px;
+                    padding: 36px 30px 65px 30px;
+                    position: absolute;
+                    top: 0;
+                    left: -100%;
+                    width: 100%;
+                    height: 100%;
+                    transition: .3s ease-in-out;
+                    background: linear-gradient(135.47deg, #4689D7 0.81%, #1E5DD3 100%);
+                    .blog_hover-title{
+                        @include myfont(normal, 500, 24px, $white);
+                        line-height: 35px;
+                        padding-bottom: 14px;
+                    }
+                    .blog_hover-description{
+                        @include myfont(normal, 400, 14px, $white);
+                        line-height: 30px;
+                    }
+                    .blog_hover-link{
+                        @include myfont(normal, 400, 16px, $white);
+                    }
+                }
+                &:hover .blog_hover{
+                    left: 0;
+                }
+            }
+        }
+        .blog-link{
+            .section-link{
+                padding: 19px 32px;
+            }
+        }
+    }
+}
+// Home page order website style
+.orderWebsite{
+    padding: 88px 0;
+    background: url('../../../public/images/185-layers.png')center/cover no-repeat;
+    .orderWebsite-section{
+        padding: 60px 0 80px 0;
+        @include grid-box(repeat(auto-fill, minmax(450px,1fr)),dense,50px);
+        .order_call{
+            width: 80%;
+            .section-description{
+                padding: 16px 0 20px 0;
+            }
+            .order_call-detail{
+                .section-description{
+                    margin-bottom: 0;
+                    padding-top: 0;
+                    padding-bottom: 5px;
+                }
+                .order_call-detail_numbers{
+                    flex-direction: column;
+                    a{
+                        width: 100%;
+                        @include myfont(normal, 400, 20px, $sblue);
+                        display: block;
+                        padding-bottom: 5px;
+                    }
+                }
+                .order_call-detail_mail{
+                    a{
+                        line-height: 34px;
+                        @include myfont(normal, 400, 20px, $dblue);
+                    }
+                }
+            }
+        }
+        .order_form{
+            form{
+                .order_form-title{
+                    line-height: 51px;
+                    @include myfont(normal, 600, 34px, $dblue);
+                }
+                .order_form-fields{
+                    padding-top:54px;
+                    .order_form-field{
+                        width: 100%;
+                        border:none;
+                        resize: none;
+                        outline:none;
+                        line-height:24px;
+                        padding-bottom:5px;
+                        margin-bottom: 50px;
+                        border-bottom: 1px solid #DCE4F0;
+                        @include myfont(normal, 400, 16px, $dgray);
+                    }
+                    .section-link{
+                        padding: 19px 30px;
+                    }
+                }
+            }
+        }
+    }
+}

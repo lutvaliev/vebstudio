@@ -1,0 +1,21 @@
+// Style of section name
+.section-name{
+    text-transform: uppercase;
+    @include myfont(normal, 400, 18px, $dblue);
+    line-height: 27px;
+}
+
+// Style of section title
+.section-title{
+    @include myfont(normal, 500, 42px, $dblue);
+    line-height: 63px;
+    span{
+        font-weight: 700;
+    }
+}
+
+
+.section-description{
+    @include myfont(normal, 400, 20px, $sgray);
+}
+

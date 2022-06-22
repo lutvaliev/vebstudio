@@ -1,0 +1,40 @@
+.team{
+    background-color: $gray;
+    .team-section{
+        padding: 70px 0;
+        .team_members{
+            padding-top:106px;
+            .team_member{
+                .team_member-img{
+                    margin: auto;
+                    width: 245px;
+                    transition: .3s ease-in-out;
+                    &:hover{
+                        transform: translateY(-20px);
+                    }
+                    img{
+                        width: 100%;
+                        height: 245px;
+                        object-fit: cover;
+                        border-radius: 100%;
+                    }
+                }
+                .team_member-info{
+                    padding-top:27px;
+                    text-align: center;
+                    .team_member-name{
+                        @include myfont(normal, 500, 22px, $dblue);
+                        line-height: 33px;
+                        margin-bottom: 0;
+                    }
+                    .team_member-speciallity{
+                        padding-top:7px;
+                        @include myfont(normal, 400, 18px, $sblue);
+                        line-height: 27px;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

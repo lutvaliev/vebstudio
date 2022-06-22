@@ -1,0 +1,49 @@
+header{
+    z-index: 3;
+    width: 100%;
+    padding: 40px 0;
+    @include positionT(absolute,0);
+    // background:url('../../../public/images/header-banner.png')center/cover no-repeat;
+    .header{
+        .header_left-side{
+            .header-logo{
+                a{
+                    @include myfont(normal, 500, 40px, $white);
+                }
+            }
+        }
+        .header_right-side{
+            .header_menu{
+                .header_menu-items{
+                    padding: 0;
+                    margin: 0;
+                    .header_menu-item{
+                        margin-right:50px;
+                        &:last-child{
+                            margin-right:0;
+                        }
+                        .header_menu-item_link{
+                            color: $white;
+                        }
+                    }
+                }
+            }
+            .header_search{
+                cursor:pointer;
+                margin: 0 50px;
+                i{
+                    color: $white;
+                    font-size: 20px;
+                }
+            }
+            .header-lang{
+                select{
+                    color:$white;
+                    padding: 12px 14px;
+                    background-color: transparent;
+                    @include border(1px solid white, 5px);
+                }
+            }
+        }
+    }
+}

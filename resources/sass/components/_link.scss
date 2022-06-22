@@ -1,0 +1,10 @@
+.section-link{
+    color: white;
+    padding: 16px 78px;
+    @include border(none, 3px);
+    @include myfont(normal, 700, 18px, $white);
+    background: linear-gradient(135.47deg, #4689D7 0.81%, #1E5DD3 100%);
+    &:hover{
+        color: $white;
+    }
+}

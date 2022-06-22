@@ -1,0 +1,72 @@
+.contact{
+    background-color: $gray;
+    .contact-section{
+        padding: 60px 0;
+        align-items: center;
+        @include grid-box(repeat(auto-fill, minmax(450px,1fr)),dense,0px);
+        .contact-title{
+            line-height: 48px;
+            @include myfont(normal, 700, 32px, $dblue);
+        }
+        .contact_details{
+            .contact_details-all{
+                padding: 20px 0 0 0;
+                .contact_detail{
+                    padding-bottom: 20px;
+                    .contact_detail-info{
+                        padding-left: 24px;
+                        .contact_detail-info-title{
+                            margin-bottom: 0;
+                            line-height: 33px;
+                            padding-bottom: 8px;
+                            @include myfont(normal, 600, 22px, $dblue);
+                        }
+                        a{
+                            transition: .3s ease-in-out;
+                            &:hover{
+                                color: $sblue;
+                            }
+                        }
+                        a,h6{
+                            margin-bottom: 0;
+                            line-height: 27px;
+                            @include myfont(normal, 400, 18px, $dblue);
+                        }
+                    }
+                }
+            }
+        }
+        .contact_form{
+            form{
+                padding: 85px 55px;
+                border-radius: 50px;
+                background-color: $white;
+                box-shadow: 5px 5px 40px 0px #0000001A;
+                .contact_form-fields{
+                    padding: 42px 0 16px 0;
+                    @include grid-box(repeat(auto-fill, minmax(250px,1fr)),dense,20px);
+                    .contact_form-field,.contact_form-textarea{
+                        border: none;
+                        outline: none;
+                        padding: 11px;
+                        line-height: 21px;
+                        border-bottom: 1px solid #D0D5DA;
+                        @include myfont(normal, 400, 14px, #B3B7BD);
+                        &::placeholder{
+                            color: #B3B7BD;
+                        }
+                    }
+                    .contact_form-textarea{
+                        resize: none;
+                        grid-column: span 2;
+                    }
+                }
+                .section-link{
+                    line-height: 21px;
+                    padding: 10px 25px;
+                    @include myfont(normal, 500, 14px, $white);
+                }
+            }
+        }
+    }
+}
