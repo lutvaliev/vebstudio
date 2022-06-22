@@ -62,6 +62,7 @@
                     }
                 }
                 .section-link{
+                    z-index: 2;
                     line-height: 21px;
                     padding: 10px 25px;
                     @include myfont(normal, 500, 14px, $white);

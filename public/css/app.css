@@ -1288,6 +1288,7 @@ footer .footer-copyright p {
 }
 
 .contact .contact-section .contact_form form .section-link {
+  z-index: 2;
   line-height: 21px;
   padding: 10px 25px;
   font-style: normal;
